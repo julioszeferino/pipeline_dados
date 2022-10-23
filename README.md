@@ -19,19 +19,16 @@ Por fim, os dados sao filtrados e processados de acordo com as regras de negocio
 
 ## **Como Executar este Projeto**
 
-1. Crie uma instancia no `AWS EC2` ou outro provedor da sua escolha, realize o download deste repositorio e execute o docker-compose para realizar o build dos containers:
+1. Crie uma instancia no `AWS EC2` ou outro provedor da sua escolha, realize o download deste repositorio e execute o docker-compose para realizar o build dos containers:  
 ```bash
 docker-compose up -d
-```
-
-2. Criar um bucket no `AWS S3` com o nome *data-lake-pnad*.
-3. Crie um servidor de banco de dados `PostgreSQL` utilizando a `AWS RDS`. Alem disso, crie o database `dw_pnad`.
-
-
-4. Adicione as credenciais de acesso da API e do cluster MongoDB no arquivo `./conf/config.yaml`.
-5. Adicione as credenciais da aws para acesso ao S3 e os dados de acesso ao banco de dados no arquivo `./conf/config.yaml`.
-
-6. Executar o pipeline de dados no `Apache Airflow`
+```  
+2. Criar um bucket no `AWS S3` com o nome *data-lake-pnad*.  
+3. Crie um servidor de banco de dados `PostgreSQL` utilizando a `AWS RDS`. Alem disso, crie o database `dw_pnad`.  
+4. Adicione as credenciais de acesso da API e do cluster MongoDB no arquivo `./conf/config.yaml`.  
+5. Adicione as credenciais da aws para acesso ao S3 e os dados de acesso ao banco de dados no arquivo `./conf/config.yaml`.  
+6. Crie as tabelas no banco de dados executando os comandos do arquivo `databases.sql`.  
+7. Executar o pipeline de dados no `Apache Airflow`.  
 
 ## **Referencias**
 
