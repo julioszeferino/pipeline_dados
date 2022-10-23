@@ -27,7 +27,7 @@ Os dados em sua camada raw sao colocados em um bucket da **AWS S3** que servira 
 
 Por fim, os dados sao filtrados e processados de acordo com as regras de negocio, modelados em formato dimensional e inseridos em um servidor **PostgreSQL** criado no **AWS RDS** e que servira como **Data Warehouse**.  
 
-## **Modelo Multidimensional do Data Warehouse - SnowFlake**
+## **Modelo Multidimensional do Data Warehouse - Snowflake**
 ![model_dw_desafio](media/dw_model.png)
 
 ## **Estrutura das tabelas do Data Lake**
@@ -60,9 +60,9 @@ plataformas de cloud.
 ![pipeline_dados](media/pipeline.png)  
 1. **Task execute-crawler:** task responsavel por extrair os dados da pnad armazenados no cluster MongoDB e da api de regioes do IBGE.  
 2. **Task load-s3** task responsavel por armazenar os dados da pnad extraidos do cluster MongoDB no s3. 
-3. **Task load-s3-1:** task responsavel por enviar os dados da api do ibge para o s3 
-4. **Task etl:** task responsavel por transformar os dados de acordo com o modelo dimensional definido. 
-5. **Task load-rds:** task responsavel por carregar os dados no banco de dados. 
+3. **Task load-s3-1:** task responsavel por enviar os dados da api do ibge para o s3.  
+4. **Task etl:** task responsavel por transformar os dados de acordo com o modelo dimensional definido.  
+5. **Task load-rds:** task responsavel por carregar os dados no banco de dados.   
 ## **Como Executar este Projeto**
 
 1. Crie uma instancia no `AWS EC2` ou outro provedor da sua escolha, realize o download deste repositorio e execute o docker-compose para realizar o build dos containers:  
