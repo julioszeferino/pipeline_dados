@@ -1,6 +1,6 @@
 # Criacao de um Pipeline de Dados
 
-> Projeto pratico em modo de desafio com a criacao de um banco um pipeline de dados completo desenvolvido como atividade avaliativa final do Bootcamp Engenheiro de Dados da XPEducacao.
+> Projeto pratico em modo de desafio com a criacao de um pipeline de dados completo desenvolvido como atividade avaliativa final do Bootcamp Engenheiro de Dados da XPEducacao.
 
 O pipeline foi criado a partir dos requisitos propostos pelo [desafio](docs/media/desafio_xp.pdf).
 
@@ -24,35 +24,18 @@ Por fim, os dados sao filtrados e processados de acordo com as regras de negocio
 docker-compose up -d
 ```
 
-2. Criar um bucket no `AWS S3` com o nome *etl-seguros*.
-3. No painel web do `Apache Airflow` cadastrar a variavel *aws_default_secret* com os dados de acesso da sua conta aws:
-```
-{
-    "aws_access_key_id": "",
-    "aws_secret_access_key"
-}
-```
+2. Criar um bucket no `AWS S3` com o nome *data-lake-pnad*.
+3. Crie um servidor de banco de dados `PostgreSQL` utilizando a `AWS RDS`. Alem disso, crie o database `dw_pnad`.
 
-4. Crie um database chamado **seguros** dentro de cluster na `AWS Redshift`. No painel web do `Apache Airflow` cadastrar a variavel *aws_redshift_seguros_secret* com os dados de acesso ao banco:
-```
-{
-    "user": "",
-    "password": ""
-}
-```
-5. Realizar o pull da imagem docker responsavel por realizar o processo de ETL nos dados
-```bash
-$ docker pull julioszeferino/docker-operator-etl
-```
+
+4. Adicione as credenciais de acesso da API e do cluster MongoDB no arquivo `./conf/config.yaml`.
+5. Adicione as credenciais da aws para acesso ao S3 e os dados de acesso ao banco de dados no arquivo `./conf/config.yaml`.
+
 6. Executar o pipeline de dados no `Apache Airflow`
-7. Configurar e criar as visualizacoes no `Power BI`
-
-## **Dashboard**
-[![Seguros](docs/media/seguros.png)](https://app.powerbi.com/view?r=eyJrIjoiNmIwNDg1ZjctZmY0YS00ZjYwLTlhYjgtMjcxNjQyZDJhZWY1IiwidCI6IjM0Zjc1YTY1LWUzYWItNDY3Yy1hNzhhLTcxNjkwNTBjMWY5MSJ9)  
 
 ## **Referencias**
 
-A documentacao completa do projeto esta disponivel neste link: https://julioszeferino.github.io/banco_dados_dimensional/ 
+A documentacao completa do projeto esta disponivel neste link: https://julioszeferino.github.io/pipeline_dados/ 
 
 ## Histórico de Atualizações
 
