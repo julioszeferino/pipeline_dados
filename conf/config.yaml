@@ -1,0 +1,19 @@
+app: v1.0
+rds:
+  host: ""
+  port: 5432
+  user: ""
+  passwd: ""
+  db: dw_pnad
+ibge_conn:
+  api: https://servicodados.ibge.gov.br/api/v1/localidades/estados
+pnad_conn:
+  server: unicluster.ixhvw.mongodb.net
+  user: ""
+  passwd: ""
+  db: ibge
+  collection: pnadc20203
+s3:
+  AWS_KEY: ""
+  AWS_SECRET_KEY: ""
+  BUCKET: "data-lake-pnad"
