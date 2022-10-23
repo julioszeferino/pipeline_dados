@@ -1,4 +1,4 @@
-# Banco de Dados Dimensional
+# Criacao de um Pipeline de Dados
 
 > Projeto pratico em modo de desafio com a criacao de um pipeline de dados completo desenvolvido como atividade avaliativa final do Bootcamp Engenheiro de Dados da XPEducacao.
 ## **Estrutura do Projeto**
