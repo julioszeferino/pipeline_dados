@@ -59,8 +59,8 @@ plataformas de cloud.
 ## **Pipeline de Dados Apache Airflow**
 ![pipeline_dados](media/pipeline.png)  
 1. **Task execute-crawler:** task responsavel por extrair os dados da pnad armazenados no cluster MongoDB e da api de regioes do IBGE.  
-2. **Task load-s3** task responsavel por armazenar os dados da pnad extraidos do cluster MongoDB no s3. 
-3. **Task load-s3-1:** task responsavel por enviar os dados da api do ibge para o s3.  
+2. **Task load-s3** task responsavel por armazenar os dados da pnad extraidos do cluster MongoDB no s3.  
+3. **Task load-s3-1:** task responsavel por enviar os dados da api do ibge para o s3.   
 4. **Task etl:** task responsavel por transformar os dados de acordo com o modelo dimensional definido.  
 5. **Task load-rds:** task responsavel por carregar os dados no banco de dados.   
 ## **Como Executar este Projeto**
